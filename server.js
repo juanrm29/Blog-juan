@@ -36,8 +36,8 @@ mongoose.connect(process.env.DB_LOCATION, {
 // setting up s3 bucket
 const s3 = new aws.S3({
     region: process.env.AWS_BUCKET_REGION,
-    accessKeyId: process.env.AWS_ACCESS_KEY,
-    secretAccessKey: process.env.AWS_SECRET_ACCESS
+    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
 })
 
 const generateUploadURL = async () => {
